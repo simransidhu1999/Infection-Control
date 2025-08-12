@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Infection Prevention and Control</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+    }
+    header {
+      background: #0ea5e9;
+      color: white;
+      padding: 12px 16px;
+      position: sticky;
+      top: 0;
+    }
+    .wrap { max-width: 980px; margin: auto; padding: 0 16px; }
+    nav {
+      margin-top: 8px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 8px;
+    }
+    nav a {
+      text-align: center;
+      text-decoration: none;
+      color: #0f172a;
+      background: #e0f2fe;
+      padding: 10px 12px;
+      border-radius: 8px;
+    }
+    section { scroll-margin-top: 82px; padding: 24px 0; }
+    .box {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      padding: 14px;
+      border-radius: 10px;
+    }
+    img.profile {
+      width: 100%;
+      max-width: 220px;
+      border-radius: 10px;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .profiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    footer {
+      background: #fafafa;
+      padding: 16px;
+      font-size: 14px;
+      color: #64748b;
+      border-top: 1px solid #e5e7eb;
+    }
+    .apa-ref {
+      font-size: 14px;
+      margin-bottom: 8px;
+      text-indent: -20px;
+      padding-left: 20px;
+    }
+    button {
+      padding: 8px 14px;
+      background: #0ea5e9;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>IPAC Basics</h1>
+    <nav>
+      <a href="#intro">Homepage</a>
+      <a href="#goal">Our Goal</a>
+      <a href="#ppe">Importance of PPE</a>
+      <a href="#transmission">Transmission & Precaution</a>
+      <a href="#quiz">Quick Quiz</a>
+      <a href="#about">About Us</a>
+      <a href="#references">References</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="intro">
+    <div class="wrap box">
+      <h2>Introduction</h2>
+      <p>Infection prevention and control (IPAC) means stopping germs from spreading (Public Health Ontario, 2023). 
+      It involves daily practices like washing hands, wearing protective gear, cleaning surfaces, and following rules 
+      to protect patients, staff, and the public.</p>
+    </div>
+  </section>
+
+  <section id="goal">
+    <div class="wrap box">
+      <h2>Our Goal</h2>
+      <p>We want fewer infections and a healthy community. By understanding the chain of infection (Centers for Disease Control and Prevention, 2022), 
+      we can break it through hand hygiene, PPE, cleaning, and isolation.</p>
+      <h3>Hand Hygiene Video</h3>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/3PmVJQUCm4E" title="WHO Handwashing" allowfullscreen></iframe>
+      <p><em>Reference: World Health Organization, 2009.</em></p>
+    </div>
+  </section>
+
+  <section id="ppe">
+    <div class="wrap box">
+      <h2>Importance of PPE</h2>
+      <p>PPE keeps healthcare workers and patients safe (Ontario Ministry of Health, 2021). 
+      A basic kit includes gloves, masks, eye protection, gowns, and respirators.</p>
+    </div>
+  </section>
+
+  <section id="transmission">
+    <div class="wrap box">
+      <h2>Transmission & Precaution</h2>
+      <p>There are three main transmission types: contact, droplet, and airborne (CDC, 2022). 
+      Standard precautions apply to all patients; transmission-based precautions depend on the infection type.</p>
+    </div>
+  </section>
+
+  <section id="quiz">
+    <div class="wrap box">
+      <h2>Quick Quiz</h2>
+      <p>(WHO, 2009; Public Health Ontario, 2023)</p>
+      <form id="quizForm">
+        <p>1. The best time to perform hand hygiene is: <br>
+        <select name="q1" required>
+          <option value="">-- Choose an answer --</option>
+          <option>Only when hands look dirty</option>
+          <option>Before and after patient contact</option>
+          <option>Once every few hours</option>
+        </select></p>
+        
+        <p>2. PPE stands for: <br>
+        <select name="q2" required>
+          <option value="">-- Choose an answer --</option>
+          <option>Personal Protective Equipment</option>
+          <option>Patient Protection Essentials</option>
+          <option>Public Protection Effort</option>
+        </select></p>
+        
+        <p>3. True or False: Airborne precautions are needed for diseases like tuberculosis. <br>
+        <select name="q3" required>
+          <option value="">-- Choose an answer --</option>
+          <option>True</option>
+          <option>False</option>
+        </select></p>
+        
+        <button type="submit">Check Answers</button>
+      </form>
+      <p id="result" style="font-weight: bold; margin-top: 10px;"></p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap box">
+      <h2>About Us</h2>
+      <div class="profiles">
+        <div>
+          <img src="harmeet.png" alt="Harmeet Kour" class="profile">
+          <p><strong>Harmeet Kour</strong><br>Second-Term Nursing Student</p>
+        </div>
+        <div>
+          <img src="julie.png" alt="Julie Demunga" class="profile">
+          <p><strong>Julie Demunga</strong><br>Second-Term Nursing Student</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="references">
+    <div class="wrap box">
+      <h2>References</h2>
+      <p class="apa-ref">Centers for Disease Control and Prevention. (2022). <em>Chain of infection</em>. U.S. Department of Health & Human Services. https://www.cdc.gov/infection-control/hcp/infection-chain.html</p>
+      <p class="apa-ref">Ontario Ministry of Health. (2021). <em>Personal protective equipment (PPE) use in healthcare settings</em>. Government of Ontario. https://www.health.gov.on.ca/en/pro/programs/publichealth/coronavirus/docs/2019_personal_protective_equipment_use.pdf</p>
+      <p class="apa-ref">Public Health Ontario. (2023). <em>Infection prevention and control basics</em>. https://www.publichealthontario.ca/en/health-topics/infection-prevention-control</p>
+      <p class="apa-ref">World Health Organization. (2009). <em>How to handwash? With soap and water</em> [Video]. YouTube. https://www.youtube.com/watch?v=3PmVJQUCm4E</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2025 College Assignment – Infection Prevention and Control.</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('quizForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const answers = [
+    document.querySelector('[name="q1"]').value === 'Before and after patient contact',
+    document.querySelector('[name="q2"]').value === 'Personal Protective Equipment',
+    document.querySelector('[name="q3"]').value === 'True'
+  ];
+  const score = answers.filter(Boolean).length;
+  let feedback = '';
+  if(score === 3) {
+    feedback = 'Excellent! All answers correct.';
+  } else if(score === 2) {
+    feedback = 'Good job, but review the material for the missed question.';
+  } else {
+    feedback = 'Needs improvement. Please review the IPAC basics.';
+  }
+  document.getElementById('result').textContent = 'Score: ' + score + '/3 — ' + feedback;
+});
+</script>
+
+</body>
+</html>
